@@ -17,7 +17,7 @@
 }
 
 #supportHero {
-    background-color: rgb(56, 126, 209);
+    background-color: #E74C3C;
     color: white;
 }
 
@@ -162,4 +162,19 @@
   html {
     @apply font-sans;
     }
+}
+
+
+a {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cf3f31;
+}
+
+button {
+  background-color: #E74C3C !important;
+  color: white !important;
 }

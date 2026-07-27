@@ -1,4 +1,5 @@
-// require("dotenv").config();
+
+
 import React, { useState } from "react";
 
 import "./Ai.css";
@@ -24,7 +25,7 @@ function Ai() {
       method: "POST",
       headers: {
         Authorization:
-        "Bearer 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",
+        "Bearer process.env.AI_API_KEY",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

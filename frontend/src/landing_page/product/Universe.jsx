@@ -10,7 +10,7 @@ function Universe() {
   return (
     <div className="container mt-5">
       <div className="row text-center">
-        <h1>The Zerodha Universe</h1>
+        <h1>The EquityX Ecosystem</h1>
         <p>
           Extend your trading and investment experience even further with our
           partner platforms
@@ -40,7 +40,7 @@ function Universe() {
           <img src={dittologo} alt="" style={{width: "40%"}}/>
           <p className="text-small text-muted">Insurance</p> 
         </div>
-        <button className='p-2 btn btn-primary fs-5 mb-5' style={{width:"20%", margin:"0 auto" }}>Signup Now</button>
+        <button className='p-2 btn  fs-5 mb-5' style={{width:"20%", margin:"0 auto" }}>Signup Now</button>
       </div>
     </div>
   );

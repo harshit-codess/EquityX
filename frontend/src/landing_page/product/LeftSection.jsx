@@ -8,36 +8,39 @@ function LeftSection({
   productDescription,
   tryDemo,
   learnMore,
-  googlePlay,
-  appStore,
 }) {
   return (
-    <div className="container ">
-      <div className="row">
+    <div className="container">
+      <div className="row align-items-center">
         <div className="col">
-          <img src={imageURL} alt="" />
+          <img src={imageURL} alt={productName} className="img-fluid" />
         </div>
-        <div className="col p-5 mt-5">
+
+        <div className="col p-5">
           <h1>{productName}</h1>
+
           <p>{productDescription}</p>
 
           <div>
             <a href={tryDemo} style={{ textDecoration: "none" }}>
-              Try Demo <i class="fa-solid fa-arrow-right-long"></i>
+              Explore Platform <i className="fa-solid fa-arrow-right-long"></i>
             </a>
+
             <a
               href={learnMore}
               style={{ marginLeft: "50px", textDecoration: "none" }}
             >
-              Learn More <i class="fa-solid fa-arrow-right-long"></i>
+              Learn More <i className="fa-solid fa-arrow-right-long"></i>
             </a>
           </div>
-          <div className="mt-3">
-            <a href="">
-              <img src={googlePlayBadge} alt="" />
+
+          <div className="mt-4">
+            <a href="#">
+              <img src={googlePlayBadge} alt="Google Play" />
             </a>
-            <a href="" style={{ marginLeft: "50px" }}>
-              <img src={appstoreBadge} alt="" />
+
+            <a href="#" style={{ marginLeft: "50px" }}>
+              <img src={appstoreBadge} alt="App Store" />
             </a>
           </div>
         </div>

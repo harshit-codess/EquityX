@@ -3,15 +3,35 @@ import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
-    <div className="container p-5 mb-5" style={{marginLeft: "300px"}}>
-      <div className="row text-start">
-        
-          <h1 className="mt-5 mb-3 text-muted">404 Not Found</h1>
-          <p>We couldn’t find the page you were looking for.</p> <br />
-          <p>
-            Visit <Link to="/">Zerodha’s home page</Link>
+    <div className="container py-5">
+      <div
+        className="row justify-content-center text-center"
+        style={{ minHeight: "60vh", alignItems: "center" }}
+      >
+        <div className="col-md-8">
+          <h1 className="display-1 fw-bold" style={{ color: "#E74C3C" }}>
+            404
+          </h1>
+
+          <h2 className="mb-3">Page Not Found</h2>
+
+          <p className="text-muted mb-4">
+            Sorry, the page you’re looking for doesn’t exist or may have been
+            moved.
           </p>
 
+          <Link
+            to="/"
+            className="btn"
+            style={{
+              backgroundColor: "#E74C3C",
+              color: "#fff",
+              padding: "10px 24px",
+            }}
+          >
+            Back to EquityX
+          </Link>
+        </div>
       </div>
     </div>
   );
