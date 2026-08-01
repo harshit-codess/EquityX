@@ -8,7 +8,7 @@ const Positions = () => {
   const [ allPositions, setAllPositions ] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/allpositions").then((res) => {
+    axios.get("https://equity-x.vercel.app/allpositions").then((res) => {
       // console.log(res);
       setAllPositions(res.data);
     })

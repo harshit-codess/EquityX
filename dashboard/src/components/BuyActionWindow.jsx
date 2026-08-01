@@ -19,7 +19,7 @@ function BuyActionWindow({ uid }) {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = async () => {
-    await axios.post("http://localhost:3000/newOrder", {
+    await axios.post("hhttps://equity-x.vercel.app/newOrder", {
       user: user,
       name: uid,
       qty: stockQuantity,

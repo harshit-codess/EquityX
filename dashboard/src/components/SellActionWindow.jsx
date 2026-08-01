@@ -14,7 +14,7 @@ function SellActionWindow({ uid }) {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = async () => {
-    await axios.delete("http://localhost:3000/deleteHolding", {
+    await axios.delete("https://equity-x.vercel.app/deleteHolding", {
       data: {
         name: uid,
         qty: stockQuantity,

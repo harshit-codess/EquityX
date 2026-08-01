@@ -11,7 +11,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/allholdings").then((res) => {
+    axios.get("https://equity-x.vercel.app/allholdings").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
