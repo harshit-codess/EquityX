@@ -9,7 +9,7 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
-const { SignUp, Login, Logout } = require("./Controllers/AuthController");
+const { SignUp, Login, Logout } = require("./controllers/AuthController");
 const { userVerification } = require("./controllers/AuthMiddleware");
 
 const jwt = require("jsonwebtoken");
