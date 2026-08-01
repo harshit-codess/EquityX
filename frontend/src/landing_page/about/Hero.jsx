@@ -3,16 +3,24 @@ import React from "react";
 function Hero() {
   return (
     <div className="container">
-      <div className="row p-5 mt-5 mb-5 ">
-        <h1 className="fs-4 text-center text-muted ">
-          We pioneered the discount broking model in India
-          <br />
-          Now, we are breaking ground with our technology.
-        </h1>
+
+      {/* Heading */}
+      <div className="row py-5 my-5">
+        <div className="col-12">
+          <h1 className="fs-4 text-center text-muted">
+            We pioneered the discount broking model in India
+            <br />
+            Now, we are breaking ground with our technology.
+          </h1>
+        </div>
       </div>
 
-      <div className="row p-5 mt-5 mt-5 border-top" style={{lineHeight: "1.8", fontSize:"1.05em"}}>
-        <div className="col-6 p-5">
+      {/* Content */}
+      <div
+        className="row border-top py-5"
+        style={{ lineHeight: "1.8", fontSize: "1.05rem" }}
+      >
+        <div className="col-12 col-lg-6 p-3 p-lg-5">
           <p>
             We kick-started operations on the 15th of August, 2010 with the goal
             of breaking all barriers that traders and investors face in India in
@@ -29,19 +37,22 @@ function Hero() {
           <p>
             Over 1.6+ crore clients place billions of orders every year through
             our powerful ecosystem of investment platforms, contributing over
-            15% of all Indian retail trading volumes.{" "}
+            15% of all Indian retail trading volumes.
           </p>
         </div>
-        <div className="col-6 p-5">
+
+        <div className="col-12 col-lg-6 p-3 p-lg-5">
           <p>
             In addition, we run a number of popular open online educational and
             community initiatives to empower retail traders and investors.
           </p>
 
           <p>
-            <a href="" style={{textDecoration: "none"}}>Rainmatter</a>, our fintech fund and incubator, has invested in several
-            fintech startups with the goal of growing the Indian capital
-            markets.
+            <a href="" className="text-decoration-none">
+              Rainmatter
+            </a>
+            , our fintech fund and incubator, has invested in several fintech
+            startups with the goal of growing the Indian capital markets.
           </p>
 
           <p>
@@ -51,6 +62,7 @@ function Hero() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }

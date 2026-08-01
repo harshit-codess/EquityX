@@ -2,26 +2,20 @@ import React from "react";
 
 function OpenAccount() {
   return (
-    <div className="container p-5 mb-5">
-      <div className="row text-center">
-        <h1 className="mt-5 mb-3">Open an EquityX account</h1>
-        <p className="mb-4">
+    <section className="open-account">
+      <div className="open-account-container">
+        <h1>Open an EquityX account</h1>
+
+        <p>
           Experience seamless investing with modern trading platforms, ₹0
-          account opening, and flat ₹20 intraday & F&O brokerage.
+          account opening, and flat ₹20 intraday &amp; F&amp;O brokerage.
         </p>
-        <button
-          className="p-2 btn fs-5 mb-5"
-          style={{
-            width: "20%",
-            margin: "0 auto",
-            backgroundColor: "#E74C3C",
-            color: "#fff",
-          }}
-        >
+
+        <button className="open-account-btn">
           Sign Up Now
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 

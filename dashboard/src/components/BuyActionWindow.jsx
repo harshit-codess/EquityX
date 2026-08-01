@@ -1,17 +1,19 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import GeneralContext from "./GeneralContext";
-import { UserContext } from './UserContext.jsx';
+import { UserContext } from "./UserContext.jsx";
+
+import * as motion from "motion/react-client";
 
 import "./BuyActionWindow.css";
 
 import axios from "axios";
 
 function BuyActionWindow({ uid }) {
+  // const navigate = useNavigate();
   const generalContext = useContext(GeneralContext);
-  const { username:user } = useContext(UserContext);
-  console.log(user);
+  const { username: user } = useContext(UserContext);
 
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
@@ -33,7 +35,7 @@ function BuyActionWindow({ uid }) {
   };
 
   return (
-    <div className="container" id="buy-window">
+    <motion.div drag className="container" id="buy-window">
       <div className="regular-order">
         <div className="inputs">
           <fieldset>
@@ -58,20 +60,20 @@ function BuyActionWindow({ uid }) {
             />
           </fieldset>
         </div>
-      </div>
 
-      <div className="buttons">
-        <span>Margin required ₹140.65</span>
-        <div>
-          <Link className="btn btn-blue" onClick={handleBuyClick}>
-            Buy
-          </Link>
-          <Link className="btn btn-grey" onClick={handleCancelClick}>
-            Cancel
-          </Link>
+        <div className="buttons">
+          <span>Margin required ₹140.65</span>
+          <div>
+            <Link className="btn btn-blue" onClick={handleBuyClick}>
+              Buy
+            </Link>
+            <Link className="btn btn-grey" onClick={handleCancelClick}>
+              Cancel
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

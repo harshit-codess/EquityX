@@ -10,37 +10,65 @@ function LeftSection({
   learnMore,
 }) {
   return (
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col">
-          <img src={imageURL} alt={productName} className="img-fluid" />
+    <div className="container py-5">
+      <div className="row align-items-center gy-5">
+        {/* Image */}
+        <div className="col-12 col-lg-6 text-center">
+          <img
+            src={imageURL}
+            alt={productName}
+            className="img-fluid"
+            style={{
+              maxWidth: "520px",
+              width: "100%",
+            }}
+          />
         </div>
 
-        <div className="col p-5">
-          <h1>{productName}</h1>
+        {/* Content */}
+        <div className="col-12 col-lg-6 text-center text-lg-start px-4 px-lg-5">
+          <h1 className="display-6 fw-semibold mb-4">
+            {productName}
+          </h1>
 
-          <p>{productDescription}</p>
+          <p
+            className="text-muted mb-4"
+            style={{ lineHeight: "1.8", fontSize: "1.05rem" }}
+          >
+            {productDescription}
+          </p>
 
-          <div>
-            <a href={tryDemo} style={{ textDecoration: "none" }}>
-              Explore Platform <i className="fa-solid fa-arrow-right-long"></i>
+          {/* Links */}
+          <div className="d-flex justify-content-center justify-content-lg-start flex-wrap gap-4 mb-4">
+            <a href={tryDemo} className="text-decoration-none fw-semibold">
+              Explore Platform
+              <i className="fa-solid fa-arrow-right-long ms-2"></i>
             </a>
 
-            <a
-              href={learnMore}
-              style={{ marginLeft: "50px", textDecoration: "none" }}
-            >
-              Learn More <i className="fa-solid fa-arrow-right-long"></i>
+            <a href={learnMore} className="text-decoration-none fw-semibold">
+              Learn More
+              <i className="fa-solid fa-arrow-right-long ms-2"></i>
             </a>
           </div>
 
-          <div className="mt-4">
+          {/* Store Buttons */}
+          <div className="d-flex justify-content-center justify-content-lg-start flex-wrap gap-3">
             <a href="#">
-              <img src={googlePlayBadge} alt="Google Play" />
+              <img
+                src={googlePlayBadge}
+                alt="Google Play"
+                className="img-fluid"
+                style={{ maxWidth: "160px" }}
+              />
             </a>
 
-            <a href="#" style={{ marginLeft: "50px" }}>
-              <img src={appstoreBadge} alt="App Store" />
+            <a href="#">
+              <img
+                src={appstoreBadge}
+                alt="App Store"
+                className="img-fluid"
+                style={{ maxWidth: "160px" }}
+              />
             </a>
           </div>
         </div>

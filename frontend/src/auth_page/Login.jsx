@@ -67,7 +67,7 @@ function Login() {
 
   return( 
     <div className="form_container">
-        <h2>Login Now</h2>
+        <h2>Login now</h2>
         <form onSubmit={handleOnSubmit}>
             <div>
                 <label htmlFor="username">Username</label>

@@ -53,13 +53,19 @@ function Product() {
         learnMore=""
       />
 
-      <h4 className="text-center fw-normal">
-        Want to know more about our technology stack? Check out the{" "}
-        <a href="" style={{ textDecoration: "none" }}>
-          EquityX Tech
-        </a>{" "}
-        blog.
-      </h4>
+      <div className="container my-5">
+        <div className="row">
+          <div className="col-12">
+            <h4 className="text-center fw-normal px-3 lh-lg">
+              Want to know more about our technology stack? Check out the{" "}
+              <a href="" className="text-decoration-none">
+                EquityX Tech
+              </a>{" "}
+              blog.
+            </h4>
+          </div>
+        </div>
+      </div>
 
       <Universe />
     </>

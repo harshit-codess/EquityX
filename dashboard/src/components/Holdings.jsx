@@ -4,19 +4,18 @@ import { VerticalGraph } from "./VerticalGraph";
 
 // import { Holdings } from "../data/data";
 
-import { useContext } from 'react';
-import { UserContext } from './UserContext.jsx';
+import { useContext } from "react";
+import { UserContext } from "./UserContext.jsx";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
-  useEffect( () => {
-   axios.get("http://localhost:3000/allholdings").then((res) => {
+  useEffect(() => {
+    axios.get("http://localhost:3000/allholdings").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
   }, []);
-
 
   const labels = allHoldings.map((subArray) => subArray["name"]);
 
@@ -25,13 +24,18 @@ const Holdings = () => {
     datasets: [
       {
         label: "Stock price",
-        data: allHoldings.map((stock) => stock.price ),
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        data: allHoldings.map((stock) => stock.price),
+        backgroundColor: "#F15A29",
+        borderColor: "#F15A29",
+        borderWidth: 1,
+        borderRadius: 5,
+        hoverBorderColor: "yellow",
       },
     ],
   };
 
-  const { username:user } = useContext(UserContext);
+  const { username: user } = useContext(UserContext);
+
 
   return (
     <>
@@ -60,20 +64,20 @@ const Holdings = () => {
 
             return (
               <tbody>
-                 {(stock.user == user ) ? 
-                <tr key={index}>
-                 <td>{stock.name}</td>
-                  <td>{stock.qty}</td>
-                  <td>{stock.avg.toFixed(2)}</td>
-                  <td>{stock.price.toFixed(2)}</td>
-                  <td>{curValue.toFixed(2)}</td>
-                  <td className={profClass}>
-                    {(curValue - stock.avg * stock.qty).toFixed(2)}
-                  </td>
-                  <td className={profClass}>{stock.net}</td>
-                  <td className={dayClass}>{stock.day}</td> 
-                </tr> 
-               : null }
+                {stock.user == user ? (
+                  <tr key={index}>
+                    <td>{stock.name}</td>
+                    <td>{stock.qty}</td>
+                    <td>{stock.avg.toFixed(2)}</td>
+                    <td>{stock.price.toFixed(2)}</td>
+                    <td>{curValue.toFixed(2)}</td>
+                    <td className={profClass}>
+                      {(curValue - stock.avg * stock.qty).toFixed(2)}
+                    </td>
+                    <td className={profClass}>{stock.net}</td>
+                    <td className={dayClass}>{stock.day}</td>
+                  </tr>
+                ) : null}
               </tbody>
             );
           })}
@@ -98,7 +102,11 @@ const Holdings = () => {
           <p>P&L</p>
         </div>
       </div>
-      <VerticalGraph data={data} />
+      <div className="vertical-graph">
+        <div className="chart-inner">
+          <VerticalGraph data={data} />
+        </div>
+      </div>
     </>
   );
 };

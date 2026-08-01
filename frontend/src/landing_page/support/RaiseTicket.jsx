@@ -3,196 +3,198 @@ import React from "react";
 function RaiseTicket() {
   return (
     <div className="container">
-      <div className="row p-5 mt-5 mb-5">
-        <h1 className="text-center">
-          To create a ticket, select a relevant topic
-        </h1>
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4 className="">
-            <i className="fa-solid fa-circle-plus"></i>Account Opening
+      <div className="row py-5 my-5 g-4">
+        <div className="col-12">
+          <h1 className="text-center mb-5">
+            To create a ticket, select a relevant topic
+          </h1>
+        </div>
+
+        {/* Account Opening */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-circle-plus me-2"></i>
+            Account Opening
           </h4>
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Online Account Opening
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Offline Account Opening
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Company, Partnership and HUF Account
+
+          <a href="" className="text-decoration-none d-block mb-2">
+            Company, Partnership and HUF Account Opening
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Opening
-          </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             NRI Account Opening
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Charges at Zerodha
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Zerodha IDFC FIRST Bank 3-in-1 Account
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block">
             Getting Started
           </a>
-          <br />
         </div>
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4 className="">
-            <i className="fa-solid fa-user-circle"></i>Your Zerodha Account
+
+        {/* Your Account */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-user-circle me-2"></i>
+            Your Zerodha Account
           </h4>
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Your Profile
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Account modification
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Company, Partnership and HUF Account
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Client Master Report (CMR) and Depository Participant (DP)
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Nomination
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block">
             Transfer and conversion of securities
           </a>
-          <br />
         </div>
 
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4 className="">
-            <i className="fa-solid fa-id-card"></i>Kite
+        {/* Kite */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-id-card me-2"></i>
+            Kite
           </h4>
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             IPO
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Trading FAQs
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Margin Trading Facility (MTF) and Margins
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Charts and orders
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Alerts and Nudgesg
+
+          <a href="" className="text-decoration-none d-block mb-2">
+            Alerts and Nudges
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block">
             General
           </a>
-          <br />
         </div>
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4 className="">
-            <i className="fa-solid fa-wallet"></i>Funds
+                {/* Funds */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-wallet me-2"></i>
+            Funds
           </h4>
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Add money
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Withdraw money
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block mb-2">
             Add bank accounts
           </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+
+          <a href="" className="text-decoration-none d-block">
             eMandates
           </a>
-          <br />
         </div>
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4>
-            <i className="fa-solid fa-circle-plus"></i> Console
+
+        {/* Console */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-circle-plus me-2"></i>
+            Console
           </h4>
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Portfolio
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Corporate actions
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Funds statement
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Reports
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Profile
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block">
             Segments
           </a>
-          <br />
         </div>
-        <div className="col-4 p-5 mt-2 mb-2">
-          <h4>
-            <i className="fa-solid fa-coins"></i>Coin
+
+        {/* Coin */}
+        <div className="col-12 col-md-6 col-lg-4 p-3 p-lg-5">
+          <h4 className="fs-5 mb-4">
+            <i className="fa-solid fa-coins me-2"></i>
+            Coin
           </h4>
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Mutual funds
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             National Pension Scheme (NPS)
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Fixed Deposit (FD)
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Features on Coin
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block mb-2">
             Payments and Orders
           </a>
-          <br />
 
-          <a href="#" style={{ textDecoration: "none", lineHeight: "2.5" }}>
+          <a href="#" className="text-decoration-none d-block">
             General
           </a>
-          <br />
         </div>
       </div>
     </div>

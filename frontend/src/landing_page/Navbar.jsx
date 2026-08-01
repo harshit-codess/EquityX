@@ -1,61 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/media/logo.svg";
-import { Link } from 'react-router-dom';
+
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom" style={{backgroundColor: "white"}}>
-      <div className="container p-2">
-        <Link className="navbar-brand" to="/">
-          <img src={logo} alt="logo" style={{ width: "75%" }} />
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link className="navbar-logo" to="/">
+          <img src={logo} alt="logo" />
         </Link>
+
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="d-flex" role="search">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link " aria-current="page" to="/signup">
-                  Singup
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link " to="/products">
-                  Products
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link " to="/pricing">
-                  Pricing
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link " to="/support">
-                  Support
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link " aria-disabled="true">
-                  <i className="fa-solid fa-bars"></i>
-                </Link>
-              </li>
-            </ul>
-          </form>
-        </div>
+
+        <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
+          <li>
+            <Link to="/signup" onClick={() => setMenuOpen(false)}>
+              Signup
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/products" onClick={() => setMenuOpen(false)}>
+              Products
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/pricing" onClick={() => setMenuOpen(false)}>
+              Pricing
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/support" onClick={() => setMenuOpen(false)}>
+              Support
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );

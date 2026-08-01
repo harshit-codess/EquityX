@@ -9,6 +9,8 @@ const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropDown, setIsProfileDropDown] = useState(false);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
@@ -18,18 +20,18 @@ const Menu = () => {
   };
 
   const handleLogout = async () => {
-      await axios.post(
-    "http://localhost:3000/logout",
-    {},
-    {
-      withCredentials: true,
-    }
-  );
-  toast.success("Logged out successfully!");
-  setTimeout(() => {
-    window.location.reload();
-  }, 2000);
-  }
+    await axios.post(
+      "http://localhost:3000/logout",
+      {},
+      {
+        withCredentials: true,
+      },
+    );
+    toast.success("Logged out successfully!");
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+  };
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
@@ -37,9 +39,17 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
-      <div className="menus">
-        <ul>
+      <img src="logo.png" style={{ width: "40px" }} />
+      <div className="menus" >
+        {/* for hamburger */}
+       <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}></i>
+        </button>
+
+        <ul className={`menulink ${ menuOpen ? "active" : ""}`}>
           <li>
             <Link
               style={{ textDecoration: "none" }}

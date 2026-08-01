@@ -1,125 +1,70 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/media/logo.svg";
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: "#fafafa" }}>
-      <div className="container mt-5 border-top">
-        <div className="row mt-5">
-          <div className="col">
-            <img src={logo} alt="EquityX Logo" style={{ width: "50%" }} />
+    <footer className="footer">
+      <div className="footer-container">
 
-            <p className="mt-3">
+        <div className="footer-grid">
+
+          <div className="footer-brand">
+            <img src={logo} alt="EquityX Logo" className="footer-logo" />
+
+            <p>
               &copy; 2026, EquityX. <br />
               All rights reserved.
             </p>
 
-            <p>
-              <i className="fa-brands fa-x-twitter fs-4 pe-5 text-muted"></i>
-              <i className="fa-brands fa-square-facebook fs-4 pe-5 text-muted"></i>
-              <i className="fa-brands fa-instagram fs-4 pe-5 text-muted"></i>
-              <i className="fa-brands fa-linkedin-in fs-4 pe-5 text-muted"></i>
-            </p>
+            <div className="footer-icons">
+              <i className="fa-brands fa-x-twitter"></i>
+              <i className="fa-brands fa-square-facebook"></i>
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-linkedin-in"></i>
+            </div>
 
-            <p className="border-top pt-3">
-              <i className="fa-brands fa-youtube fs-4 pe-5 text-muted"></i>
-              <i className="fa-brands fa-whatsapp fs-4 pe-5 text-muted"></i>
-              <i className="fa-brands fa-telegram fs-4 pe-5 text-muted"></i>
-            </p>
+            <div className="footer-icons footer-icons-bottom">
+              <i className="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-whatsapp"></i>
+              <i className="fa-brands fa-telegram"></i>
+            </div>
           </div>
 
-          <div className="col">
-            <p>Company</p>
+          <div>
+            <h3>Company</h3>
 
-            <a href="" className="footdetail">
-              About
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Products
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Careers
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Referral Program
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Pricing
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              EquityX Blog
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Press & Media
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Community
-            </a>
+            <Link className="footdetail" to="/about">About</Link>
+            <Link className="footdetail" to="/products">Products</Link>
+            <Link className="footdetail" to="/">Careers</Link>
+            <Link className="footdetail" to="/">Referral Program</Link>
+            <Link className="footdetail" to="/pricing">Pricing</Link>
+            <Link className="footdetail" to="/">EquityX Blog</Link>
+            <Link className="footdetail" to="/">Press & Media</Link>
+            <Link className="footdetail" to="/">Community</Link>
           </div>
 
-          <div className="col">
-            <p>Support</p>
+          <div>
+            <h3>Support</h3>
 
-            <a href="" className="footdetail">
-              Contact Us
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Support Portal
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              EquityX Blog
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              List of Charges
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Downloads & Resources
-            </a>
+            <Link className="footdetail" to="/support">Contact Us</Link>
+            <Link className="footdetail" to="/support">Support Portal</Link>
+            <Link className="footdetail" to="/">EquityX Blog</Link>
+            <Link className="footdetail" to="/">List of Charges</Link>
+            <Link className="footdetail" to="/">Downloads & Resources</Link>
           </div>
 
-          <div className="col">
-            <p>Account</p>
+          <div>
+            <h3>Account</h3>
 
-            <a href="" className="footdetail">
-              Open an Account
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Fund Transfer
-            </a>
-            <br />
-
-            <a href="" className="footdetail">
-              Dashboard Login
-            </a>
-            <br />
+            <Link className="footdetail" to="/signup">Open an Account</Link>
+            <Link className="footdetail" to="/">Fund Transfer</Link>
+            <Link className="footdetail" to="/login">Dashboard Login</Link>
           </div>
+
         </div>
 
-        <div className="pt-5 text-muted" style={{ fontSize: "12px" }}>
+        <div className="footer-bottom">
           <p>
             EquityX is a modern stock trading platform designed for investors
             and traders. The information available on this website is provided
@@ -152,10 +97,9 @@ function Footer() {
             making investment decisions.
           </p>
 
-          <p>
-            © 2026 EquityX. All rights reserved.
-          </p>
+          <p>© 2026 EquityX. All rights reserved.</p>
         </div>
+
       </div>
     </footer>
   );

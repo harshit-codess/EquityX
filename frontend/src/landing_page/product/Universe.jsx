@@ -8,39 +8,135 @@ import ZerodhaFundhouse from "../../assets/media/zerodhaFundhouse.png";
 
 function Universe() {
   return (
-    <div className="container mt-5">
+    <div className="container py-5">
       <div className="row text-center">
-        <h1>The EquityX Ecosystem</h1>
-        <p>
-          Extend your trading and investment experience even further with our
-          partner platforms
-        </p>
+        <div className="col-12 mb-4">
+          <h1>The EquityX Ecosystem</h1>
+          <p className="text-muted">
+            Extend your trading and investment experience even further with our
+            partner platforms
+          </p>
+        </div>
 
-        <div className="col-4 p-3 mt-5">
-          <img src={smallcase} alt="" />
-          <p className="text-small text-muted">Thematic investment platform</p>
+        {/* Smallcase */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={smallcase}
+              alt="Smallcase"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Thematic investment platform
+          </p>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src={streaklogo} alt="" style={{width: "40%"}} />
-          <p className="text-small text-muted " >Algo & strategy platform</p>
+
+        {/* Streak */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={streaklogo}
+              alt="Streak"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Algo & strategy platform
+          </p>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src={sensibull} alt="" />
-          <p className="text-small text-muted">Options trading platform</p> 
+
+        {/* Sensibull */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={sensibull}
+              alt="Sensibull"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Options trading platform
+          </p>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src={ZerodhaFundhouse} alt="" style={{width: "40%"}}/>
-          <p className="text-small text-muted">Asset management</p>
+
+        {/* Fundhouse */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={ZerodhaFundhouse}
+              alt="Fundhouse"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Asset management
+          </p>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src={goldenpilogo} alt="" />
-          <p className="text-small text-muted">Fundamental research platform</p>
+
+        {/* GoldenPi */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={goldenpilogo}
+              alt="GoldenPi"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Fundamental research platform
+          </p>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src={dittologo} alt="" style={{width: "40%"}}/>
-          <p className="text-small text-muted">Insurance</p> 
+
+        {/* Ditto */}
+        <div className="col-12 col-md-6 col-lg-4 p-4">
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "80px" }}
+          >
+            <img
+              src={dittologo}
+              alt="Ditto"
+              className="img-fluid"
+              style={{ maxHeight: "45px" }}
+            />
+          </div>
+
+          <p className="text-muted mt-3 mb-0">
+            Insurance
+          </p>
         </div>
-        <button className='p-2 btn  fs-5 mb-5' style={{width:"20%", margin:"0 auto" }}>Signup Now</button>
+
+        <div className="col-12 mt-5">
+          <button className="btn px-5 py-2 fs-5" style={{backgroundColor: "#e74c3c", color: "white"}}>
+            Signup Now
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -4,9 +4,9 @@ function Brokerage() {
     return (
         <div className="container">
               <div className="row  text-center mt-5 border-top">
-                <div className="col-8 mt-5">
-                  <a href="" style={{textDecoration: "none"}}><h3 className='fs-5'>Brokerage calculator</h3></a>
-                  <ul className='text-start  text-muted' style={{fontSize: "12px", lineHeight: "2.5", paddingLeft: "20%"}}>
+                <div className="col-lg-8 mt-5 col-12">
+                  <a href="" style={{textDecoration: "none"}}><h3 className='fs-5 '>Brokerage calculator</h3></a>
+                  <ul className='text-start  text-muted ps-lg-5' style={{fontSize: "12px", lineHeight: "2.5" }}>
                     <li>Call & Trade and RMS auto-squareoff: Additional charges of ₹50 + GST per order.</li>
                     <li>Digital contract notes will be sent via e-mail.</li>
                     <li>Physical copies of contract notes, if required, shall be charged ₹20 per contract note. Courier charges apply.</li>
@@ -15,7 +15,7 @@ function Brokerage() {
                     <li>If the account is in debit balance, any order placed will be charged ₹40 per executed order instead of ₹20 per executed order.</li>
                   </ul>
                 </div>
-                <div className="col-4 mt-5">
+                <div className="col-lg-4 mt-5 col-12">
                    <a href="" style={{textDecoration: "none"}}><h3 className='fs-5'>List of charges</h3></a>
                 </div>
               </div>

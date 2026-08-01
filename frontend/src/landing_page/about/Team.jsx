@@ -1,39 +1,83 @@
-import React from 'react';
-import nithinKamath from "../../assets/media/nithinKamath.jpg";
+import React from "react";
 
 function Team() {
-    return (
-        <div className="container">
-      <div className="row p-2 mb-5">
-        <h1 className="fs-3 text-center text-muted ">
-          People
-        </h1>
+  return (
+    <div className="container">
+      {/* Heading */}
+      <div className="row py-4 mb-4">
+        <div className="col-12">
+          <h1 className="fs-3 text-center text-muted">People</h1>
+        </div>
       </div>
 
-      <div className="row  mt-5" style={{lineHeight: "1.8", fontSize:"1.05em"}}>
-        <div className="col-6 text-center" >
-          <img src={nithinKamath} alt="" style={{borderRadius: "100%", width: "55%"}} />
-          <h4 className='mt-5'>Nithin Kamath</h4>
-          <h6 className='mt-3'>Founder, CEO</h6>
+      {/* Team Section */}
+      <div
+        className="row mt-4 align-items-center"
+        style={{ lineHeight: "1.8", fontSize: "1.05rem" }}
+      >
+        {/* Image */}
+        <div className="col-12 col-lg-6 text-center mb-5 mb-lg-0">
+          {/* Desktop */}
+          <img
+            src="https://ui-avatars.com/api/?name=Founder&background=e9ecef&color=495057&size=300"
+            alt="Founder"
+            className="img-fluid rounded-circle d-none d-lg-inline"
+            style={{ width: "70%", maxWidth: "320px" }}
+          />
+
+          {/* Mobile */}
+          <img
+            src="https://ui-avatars.com/api/?name=Founder&background=e9ecef&color=495057&size=300"
+            alt="Founder"
+            className="img-fluid rounded-circle d-lg-none"
+            style={{
+              width: "55%",
+              maxWidth: "220px",
+              marginLeft: "90px",
+            }}
+          />
+
+          <h4 className="mt-4">Harshit</h4>
+          <h6 className="mt-2 text-muted">Founder, CEO</h6>
         </div>
-        <div className="col-6 p-5">
+
+        {/* Content */}
+        <div className="col-12 col-lg-6 p-3 p-lg-5">
           <p>
-            Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced during his decade long stint as a trader. Today, Zerodha has changed the landscape of the Indian broking industry.
-          </p>
-          <p>
-            He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).
-          </p>
-          <p>
-            Playing basketball is his zen.
+            EquityX was founded with the vision of making stock investing and
+            trading simple, transparent, and accessible for everyone. Our goal
+            is to provide powerful technology without unnecessary complexity.
           </p>
 
           <p>
-            Connect on <a href="" style={{textDecoration: "none"}}>Homepage</a> / <a href="" style={{textDecoration: "none"}}>TradingQnA</a> / <a href="" style={{textDecoration: "none"}}>Twitter</a>
+            We are focused on building a modern investment platform that
+            combines speed, reliability, and an intuitive user experience for
+            every investor.
+          </p>
+
+          <p>
+            We believe technology should empower people to make smarter
+            financial decisions with confidence.
+          </p>
+
+          <p>
+            Connect on{" "}
+            <a href="" className="text-decoration-none">
+              Homepage
+            </a>{" "}
+            /{" "}
+            <a href="" className="text-decoration-none">
+              LinkedIn
+            </a>{" "}
+            /{" "}
+            <a href="" className="text-decoration-none">
+              X (Twitter)
+            </a>
           </p>
         </div>
       </div>
     </div>
-    );
+  );
 }
 
 export default Team;

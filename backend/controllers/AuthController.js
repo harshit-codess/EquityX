@@ -22,7 +22,8 @@ module.exports.SignUp = async (req, res, next) => {
     const token = createSecretToken(newUser._id);
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+      secure: true,
     });
 
     res
@@ -67,8 +68,7 @@ module.exports.Login = async (req, res, next) => {
   }
 };
 
-
 module.exports.Logout = async (req, res) => {
   res.clearCookie("token");
   res.send("Cookie is cleared");
-}
+};

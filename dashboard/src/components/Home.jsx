@@ -10,6 +10,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 import { UserContext } from "./UserContext";
+import { BrowserRouter } from "react-router";
 
 const Home = () => {
   const [username, setUsername] = useState("");
@@ -49,8 +50,7 @@ const Home = () => {
   return (
     <>
       <ToastContainer />
-      <UserContext.Provider value={{username}}>
-
+      <UserContext.Provider value={{ username }}>
         <TopBar />
         <Dashboard />
       </UserContext.Provider>
