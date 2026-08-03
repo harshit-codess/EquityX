@@ -37,7 +37,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://equity-x.vercel.app/signup",
+        "https://equity-x-backend.vercel.app/signup",
         {
           ...inputValue,
         },
