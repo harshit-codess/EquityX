@@ -21,7 +21,7 @@ module.exports.SignUp = async (req, res, next) => {
 
     const token = createSecretToken(newUser._id);
     res.cookie("token", token, {
-      // withCredentials: true,
+      withCredentials: true,
       httpOnly: false,
     });
 
@@ -39,7 +39,7 @@ module.exports.Login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
     if (!username || !password) {
-      return res.json({ message: "All dields are required" });
+      return res.json({ message: "All fields are required" });
     }
 
     const user = await UsersModel.findOne({ username: username });

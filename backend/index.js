@@ -299,6 +299,6 @@ app.post("/logout", Logout);
 
 app.listen(port, () => {
   console.log("App started");
-  mongoose.connect(url);
+  mongoose.connect(url, { bufferTimeoutMS: 30000 });
   console.log("DB conected");
 });
