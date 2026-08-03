@@ -22,7 +22,7 @@ const Home = () => {
       // }
       try {
         const { data } = await axios.post(
-          "https://equity-x-backend.vercel.app/verify",
+          "http://localhost:3000/verify",
           {},
           { withCredentials: true },
         );

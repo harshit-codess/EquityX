@@ -38,7 +38,7 @@ function Login() {
   const handleOnSubmit = async (e) => {
     try {
         e.preventDefault();
-    const { data} = await axios.post("https://equity-x-backend.vercel.app/login", {
+    const { data} = await axios.post("http://localhost:3000/login", {
         ...inputValue
     }, {
         withCredentials: true
