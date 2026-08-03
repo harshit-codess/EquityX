@@ -19,12 +19,7 @@ const url = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors({
-    origin: [  process.env.FRONTEND_URL,
-      process.env.DASHBOARD_URL,
-    ],
-    credentials: true,
-  }));
+app.use(cors());
 app.use(bodyParser.json());
 
 const cookieParser = require('cookie-parser');
