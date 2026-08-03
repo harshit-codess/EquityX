@@ -19,6 +19,19 @@ const url = process.env.MONGO_URL;
 
 const app = express();
 
+console.log("MONGO_URL exists:", !! process.env.MONGO_URL);
+
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("MongoDB Connected");
+  })
+  .catch((err) => {
+    console.error("MongoDB Connection Failed");
+    console.error(err);
+  });
+
+
 app.use(cors({
     origin: [  process.env.FRONTEND_URL,
       process.env.DASHBOARD_URL,
@@ -297,8 +310,9 @@ app.post("/verify", userVerification);
 app.post("/logout", Logout);
 
 
+
 app.listen(port, () => {
   console.log("App started");
-  mongoose.connect(url, { bufferTimeoutMS: 30000 });
+  // mongoose.connect(url, { bufferTimeoutMS: 30000 });
   console.log("DB conected");
 });
