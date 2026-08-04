@@ -49,7 +49,7 @@ function Login() {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "";
         }, 1000);
       } else {
         handleError(message);

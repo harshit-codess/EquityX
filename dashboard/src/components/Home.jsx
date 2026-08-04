@@ -21,7 +21,6 @@ const Home = () => {
       //    window.location.href = "http://localhost:5173/login";
       // }
       try {
-        debugger
         const { data } = await axios.post(
           "https://equity-x-backend.vercel.app/verify",
           {},

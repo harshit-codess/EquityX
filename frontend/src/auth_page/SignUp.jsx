@@ -48,7 +48,7 @@ const SignUp = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "https://equity-x-dashboard.vercel.app";
         }, 1000);
       } else {
         handleError(message);
