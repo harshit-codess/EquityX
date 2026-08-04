@@ -11,7 +11,7 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("https://equity-x.vercel.app/allOrders").then((res) => {
+    axios.get("https://equity-x-backend.vercel.app/allOrders").then((res) => {
       setAllOrders(res.data);
     }) 
   }, [])

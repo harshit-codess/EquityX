@@ -10,7 +10,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 import { UserContext } from "./UserContext";
-import { BrowserRouter } from "react-router";
+// import { BrowserRouter } from "react-router";
 
 const Home = () => {
   const [username, setUsername] = useState("");
@@ -21,8 +21,9 @@ const Home = () => {
       //    window.location.href = "http://localhost:5173/login";
       // }
       try {
+        debugger
         const { data } = await axios.post(
-          "http://localhost:3000/verify",
+          "https://equity-x-backend.vercel.app/verify",
           {},
           { withCredentials: true },
         );
@@ -34,7 +35,7 @@ const Home = () => {
             position: "top-right",
           });
         } else {
-          window.location.href = "http://localhost:5173/login";
+          window.location.replace("http://localhost:5173/login");
           toast(`Error found`, {
             position: "top-right",
           });

@@ -21,7 +21,7 @@ const Menu = () => {
 
   const handleLogout = async () => {
     await axios.post(
-      "http://localhost:3000/logout",
+      "https://equity-x-backend.vercel.app/logout",
       {},
       {
         withCredentials: true,

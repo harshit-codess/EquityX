@@ -4,6 +4,7 @@ const { createSecretToken } = require("../util/SecretToken");
 const bcrypt = require("bcrypt");
 
 module.exports.SignUp = async (req, res, next) => {
+  
   try {
     const { email, username, password, createdAt } = req.body;
     const existinguser = await UsersModel.findOne({ email: email });
@@ -23,6 +24,7 @@ module.exports.SignUp = async (req, res, next) => {
     res.cookie("token", token, {
       withCredentials: true,
       httpOnly: false,
+      sameSite: "None"
     });
 
     res
