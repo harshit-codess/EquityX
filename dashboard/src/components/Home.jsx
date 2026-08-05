@@ -34,13 +34,13 @@ const Home = () => {
             position: "top-right",
           });
         } else {
-          window.location.replace("http://localhost:5173/login");
+          window.location.replace("https://equity-x-frontend.vercel.app/login");
           toast(`Error found`, {
             position: "top-right",
           });
         }
       } catch (err) {
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = "https://equity-x-frontend.vercel.app/login";
       }
     };
 

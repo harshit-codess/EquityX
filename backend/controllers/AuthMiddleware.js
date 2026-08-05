@@ -10,6 +10,7 @@ module.exports.userVerification = (req, res) => {
 
     jwt.verify(token, process.env.TOKEN_KEY, async (err, data) => {
         if(err) {
+            
             return res.json({ status: false });
         } else {
             const user = await UsersModel.findById(data.id);
